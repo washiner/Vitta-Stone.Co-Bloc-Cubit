@@ -2,9 +2,9 @@
 
 Este exemplo foi elaborado em um desafio feito no curso da Alura pela Vitta Stone.Co e o objetivo é criar um exemplo de codigo usando o bloc pattern e o cubit e a implementação de suas respectivas tecnologias.
 
-1 - Criar um projeto flutter default (Contador)
-2 - instalar os pacotes bloc: any e o flutter_bloc: any
-3 - trocar o Statefull widget pelo Stateless Widget
+1 - Criar um projeto flutter default (Contador)\n
+2 - instalar os pacotes bloc: any e o flutter_bloc: any\n
+3 - trocar o Statefull widget pelo Stateless Widget\n
 
 4 - criar uma classe extendendo cubit tipando ela com o valor desejado
 5 - chamar o método construtor e o super ( da classe pai) com o valor inicial

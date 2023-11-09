@@ -20,5 +20,4 @@ Este exemplo foi elaborado em um desafio feito no curso da Alura para Vitta Ston
 
 9 - no botao que tem o onPressed usar o BlocProvider.of tipando com a classe o contexto e oque deseja da classe.
 
-
-## 100% autoral criado por Washiner Takeuchi
+# 100% autoral criado por Washiner Takeuchi

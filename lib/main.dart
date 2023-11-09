@@ -2,7 +2,7 @@ import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-//---aqui voce criou o cubit
+//----Cubit
 
 class CounterCubit extends Cubit<int> {
   CounterCubit() : super(0);
@@ -27,9 +27,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: BlocProvider(
+      home: BlocProvider( // Envolvendo o widget para poder instanciar o cubit
         create: (context) => CounterCubit(),
-        child: MyHomePage(title: 'Flutter Demo Home Page'),
+        child: MyHomePage(title: 'Flutter Demo Home Page'), // classe herdeira do cubit
       ),
     );
   }
@@ -53,7 +53,7 @@ class MyHomePage extends StatelessWidget {
             const Text(
               'You have pushed the button this many times:',
             ),
-            BlocBuilder<CounterCubit, int>(
+            BlocBuilder<CounterCubit, int>(  // função que atualiza o estado quando houver mudança
               builder: (context, state) {
                 return Text(
                   '$state',
@@ -66,7 +66,7 @@ class MyHomePage extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          BlocProvider.of<CounterCubit>(context).incrementar();
+          BlocProvider.of<CounterCubit>(context).incrementar(); // função estática que permite acessar a instância da classe fornecida pelo Provider
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),

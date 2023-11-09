@@ -1,6 +1,6 @@
 # Bloc and Cubit
 
-Este exemplo foi elaborado em um desafio feito no curso da Alura pela Vitta Stone.Co e o objetivo é criar um exemplo de codigo usando o bloc pattern e o cubit e a implementação de suas respectivas tecnologias.
+Este exemplo foi elaborado em um desafio feito no curso da Alura para Vitta Stone.Co e o objetivo é criar um exemplo de codigo usando o bloc pattern e o cubit e a implementação de suas respectivas tecnologias.
 
 1 - Criar um projeto flutter default (Contador)
 

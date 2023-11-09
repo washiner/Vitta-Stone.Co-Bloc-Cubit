@@ -15,7 +15,10 @@ Este exemplo foi elaborado em um desafio feito no curso da Alura pela Vitta Ston
 6 - criar a função incrementar com a funçao emit e oque deseja fazer
 
 7 - Envolver o BlocProvider no widget que você deseje que a classe criada seja instanciada
+
 8 - usar o BlocBuilder com o parametro builder para atualizar o estado atual passando os dois tipos genérico que e a classe e o valor inicial retornando o stado atual.
+
 9 - no botao que tem o onPressed usar o BlocProvider.of tipando com a classe o contexto e oque deseja da classe.
+
 
 # 100% autoral criado por Washiner Takeuchi

@@ -10,6 +10,11 @@ class CounterCubit extends Cubit<int> {
   incrementar() {
     emit(state + 1);
   }
+
+
+  decremente(){
+    emit(state - 1);
+  }
 }
 //--------
 
@@ -27,9 +32,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: BlocProvider( // Envolvendo o widget para poder instanciar o cubit
+      home: BlocProvider(
+        // Envolvendo o widget para poder instanciar o cubit
         create: (context) => CounterCubit(),
-        child: MyHomePage(title: 'Flutter Demo Home Page'), // classe herdeira do cubit
+        child: MyHomePage(
+            title: 'Flutter Demo Home Page'), // classe herdeira do cubit
       ),
     );
   }
@@ -49,11 +56,12 @@ class MyHomePage extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children:[
+          children: [
             const Text(
               'You have pushed the button this many times:',
             ),
-            BlocBuilder<CounterCubit, int>(  // função que atualiza o estado quando houver mudança
+            BlocBuilder<CounterCubit, int>(
+              // função que atualiza o estado quando houver mudança
               builder: (context, state) {
                 return Text(
                   '$state',
@@ -61,12 +69,21 @@ class MyHomePage extends StatelessWidget {
                 );
               },
             ),
+            ElevatedButton(
+              onPressed: () {
+                context.read<CounterCubit>().decremente();
+              },
+              child: Text("Diminuir"),
+            ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          BlocProvider.of<CounterCubit>(context).incrementar(); // função estática que permite acessar a instância da classe fornecida pelo Provider
+          //BlocProvider.of<CounterCubit>(context).incrementar(); // função estática que permite acessar a instância da classe fornecida pelo Provider
+          context
+              .read<CounterCubit>()
+              .incrementar(); // outra opçao para acessar a instancia feita pelo provider
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
